@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD</title>
+
+  </head>
+  <body>
+    <h1>LISTAGEM</h1>
+    <p>Welcome to <%= title %></p>
+    <ul>
+      <% for(let i=0; i<result.length; i++){ %>
+        <li>
+          <%= result[i].name %><%= result[i]._id %>
+        </li>
+      <%  } %>
+    </ul>
+    <h1>INSERT</h1>
+    <form action="save" method="POST">
+      <p>
+        <label for="">nome:
+        <input type="text" name="name"></label>
+      </p>
+      <p>
+        <label for="">idade:
+        <input type="number" name="age"></label>
+      </p>
+      <p>
+        <input type="submit" value="salvar">
+      </p>
+    </form>
+    <h1>DELETE</h1>
+    <form action="delete" method="POST">
+      <p>
+        <label for="">ID:
+        <input type="text" name="id"></label>
+      </p>
+   
+      <p>
+        <input type="submit" value="excluir">
+      </p>
+    </form>
+    <h1>EDIT</h1>
+    <form action="editar" method="POST">
+      <p>
+        <label for="">ID:
+        <input type="text" name="id"></label>
+      </p>
+      <p>
+        <label for="">nome:
+        <input type="text" name="name"></label>
+      </p>
+      <p>
+        <input type="submit" value="editar">
+      </p>
+    </form>
+  </body>
+</html>
